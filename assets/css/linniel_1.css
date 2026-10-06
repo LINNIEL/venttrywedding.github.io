@@ -1,0 +1,303 @@
+/* ======================================================
+   LINNIEL 1
+   COVER
+====================================================== */
+
+#linniel_1{
+
+    position:fixed;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+    max-width:400px;
+
+    height:100vh;
+
+    z-index:9999;
+
+    overflow:hidden;
+
+}
+
+
+/* ======================================================
+   BACKGROUND FOTO
+====================================================== */
+
+#linniel_1::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:var(--background-main);
+
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    z-index:1;
+
+    pointer-events:none;
+
+}
+
+
+/* ======================================================
+   SVG DECORATION
+====================================================== */
+
+#linniel_1 .cover-decoration{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+
+/* ======================================================
+   SVG 1
+====================================================== */
+
+#linniel_1 .cover-svg-1{
+
+    fill:var(--color-secondary);
+
+}
+
+
+/* ======================================================
+   SVG 2
+====================================================== */
+
+#linniel_1 .cover-svg-2{
+
+    fill:var(--color-primary);
+
+}
+
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+#linniel_1 .container-fluid{
+
+    position:relative;
+
+    z-index:3;
+
+    height:100%;
+
+}
+
+
+
+/* ======================================================
+   TEXT
+====================================================== */
+
+.opening-text{
+
+    font-size:var(--fs-body);
+
+    font-weight:var(--fw-normal);
+
+    color:var(--color-primary);
+
+    margin-bottom:15px;
+
+}
+
+
+.couple-name{
+
+    font-family:"Tangerine", cursive;
+
+    font-weight:400;
+
+    font-style:normal;
+
+    font-weight:bolder;
+
+    font-size:70px;
+
+    color:var(--color-primary);
+
+    line-height:0.2;
+
+    margin-bottom:40px;
+
+    white-space:nowrap;
+
+}
+
+
+.couple-name span{
+
+    display:block;
+
+    font-size:2rem;
+
+    margin:10px 0;
+
+}
+
+
+.guest-title{
+
+    font-size:var(--fs-small);
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:12px;
+
+}
+
+
+#guestName{
+
+    font-size:1.6rem;
+
+    color:var(--color-secondary);
+
+    filter:drop-shadow(2px 4px 4px black);
+
+    margin-bottom:35px;
+
+    word-break:break-word;
+
+    padding:0 20px;
+
+}
+
+
+
+/* ======================================================
+   BUTTON
+====================================================== */
+
+#openInvitation {
+    width: fit-content;
+    display: block;
+    margin: 0 auto;
+
+    background: var(--color-primary);
+    color: #fcfffc;
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 5px 40px;
+
+    font-size: 1rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+#openInvitation {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: var(--color-primary);
+    color: #fcfffc;
+
+    border: 2px solid white;
+    border-radius: 50px;
+
+    padding: 5px 30px;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+#openInvitation .icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+#openInvitation:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:var(--shadow);
+
+}
+
+
+#openInvitation:active{
+
+    transform:scale(.96);
+
+}
+
+
+.bawah{
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* ======================================================
+   MOBILE
+====================================================== */
+
+@media (max-width:400px){
+
+    .couple-name{
+
+        font-size:2.4rem;
+
+    }
+
+
+    #guestName{
+
+        font-size:1.35rem;
+
+    }
+
+}
+@media (max-width:320px){
+
+    .couple-name{
+
+        font-size:3.4rem;
+
+    }
+
+
+    #guestName{
+
+        font-size:1.35rem;
+
+    }
+    .bawah{
+
+    margin-bottom:-40px;
+
+}
+
+
+}

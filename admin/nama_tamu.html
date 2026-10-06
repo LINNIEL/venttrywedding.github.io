@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Generator Link Undangan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+background-color: rgb(104, 104, 104);
+background-position:center;
+background-repeat:no-repeat;
+background-size:cover;
+display:flex;
+justify-content:center;
+color: white;
+margin:0;
+}
+
+.container{
+width:100%;
+max-width:400px;
+background:rgba(255, 255, 255, 0);
+padding:20px;
+box-sizing:border-box;
+min-height:100vh;
+}
+
+h3{
+text-align:center;
+}
+
+textarea{
+width:100%;
+height:150px;
+margin-bottom:15px;
+padding:10px;
+box-sizing:border-box;
+background-color: #c8a96a7e;
+color: white;
+}
+
+button.generate{
+width:100%;
+padding:10px;
+margin-bottom:20px;
+background:#C8A96A;
+color:white;
+border:none;
+border-radius:5px;
+}
+
+.nama-label{
+font-weight:bold;
+margin-bottom:5px;
+color:#a8953d;
+}
+
+.message-box{
+background:#05050533;
+padding:10px;
+margin-bottom:15px;
+border-radius:6px;
+font-size:13px;
+white-space:pre-line;
+}
+
+.copy-btn{
+margin-top:8px;
+background:#28a745;
+color:white;
+border:none;
+padding:6px 10px;
+border-radius:4px;
+font-size:12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h3>Generator Link Undangan</h3>
+
+<p class="text-center">Masukkan daftar nama (1 nama per baris)</p>
+
+<textarea id="daftarNama" placeholder="Contoh:
+Nama Marga
+Nama Marga
+Nama Marga
+Nama Marga"></textarea>
+
+<button class="generate" onclick="buatLink()">Generate Link</button>
+
+<div id="hasil"></div>
+
+</div>
+
+<script>
+
+function buatLink(){
+
+let daftar = document.getElementById("daftarNama").value.trim().split("\n");
+
+let hasil = "";
+
+daftar.forEach(function(nama){
+
+nama = nama.trim();
+
+if(nama !== ""){
+
+nama = nama
+    .toLowerCase()
+    .replace(/\b\w/g, huruf => huruf.toUpperCase());
+
+let urlNama = encodeURIComponent(nama);
+
+let link = "https://linniel.github.io/dendessywedding.github.io/?to=" + urlNama;
+
+let pesan =
+`Assalamu’alaikum Warahmatullahi Wabarakatuh
+Shalom
+Om Swastiastu
+Namo Buddhaya
+Salam Kebajikan 🙏
+
+Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami.
+
+Untuk informasi lengkap mengenai waktu dan lokasi acara, silakan membuka undangan digital melalui link berikut:
+
+${link}
+
+Merupakan suatu kehormatan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+
+Yang Berbahagia  
+Den & Dessy`;
+
+hasil += `
+<div class="message-box">
+
+<div class="nama-label">Tamu: ${nama}</div>
+
+<div>${pesan}</div>
+
+<button class="copy-btn" onclick='copyPesan(${JSON.stringify(pesan)})'>Copy Pesan</button>
+
+</div>
+`;
+
+}
+
+});
+
+document.getElementById("hasil").innerHTML = hasil;
+
+}
+
+function copyPesan(text){
+
+navigator.clipboard.writeText(text);
+
+alert("Pesan untuk tamu berhasil disalin");
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,252 @@
+/* =================================
+   UCAPAN & DOA
+================================= */
+
+.ucapan-section {
+
+    width: 100%;
+
+    padding: 50px 20px;
+
+}
+
+
+.ucapan-header {
+
+    text-align: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.section-subtitle {
+
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--color-primary);
+    filter: drop-shadow(2px 2px 2px white);
+    margin-bottom: 8px;
+
+}
+
+
+.ucapan-header h2 {
+
+    font-size: 28px;
+
+    font-weight: 400;
+
+    margin: 0;
+
+}
+
+
+/* DAFTAR UCAPAN */
+
+.daftar-ucapan {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+/* CARD UCAPAN */
+
+.ucapan-card {
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    background-color: var(--color-primary);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    backdrop-filter: blur(10px);
+
+}
+
+
+/* NAMA */
+
+.ucapan-nama {
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* UCAPAN */
+
+.ucapan-text {
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #dddddd;
+
+    margin: 0;
+
+}
+
+
+/* STATUS */
+
+.ucapan-status {
+
+    margin-top: 8px;
+
+    font-size: 11px;
+
+    color: #c8a96a;
+
+}
+
+
+/* LOADING */
+
+.ucapan-loading {
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #aaaaaa;
+
+    padding: 20px;
+
+}
+
+
+/* KOSONG */
+
+.ucapan-empty {
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #aaaaaa;
+
+    padding: 20px;
+
+}
+
+
+/* ERROR */
+
+.ucapan-error {
+
+    text-align: center;
+
+    font-size: 13px;
+
+    color: #aaaaaa;
+
+    padding: 20px;
+
+}
+
+/* =================================
+   DAFTAR UCAPAN
+================================= */
+
+.daftar-ucapan {
+    width: 100%;
+
+    /* Tinggi area untuk sekitar 4 ucapan */
+    max-height: 360px;
+
+    /* Aktifkan scroll jika ucapan lebih dari 4 */
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding-right: 6px;
+}
+
+
+/* =================================
+   SCROLLBAR
+================================= */
+
+.daftar-ucapan::-webkit-scrollbar {
+    width: 5px;
+}
+
+.daftar-ucapan::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.daftar-ucapan::-webkit-scrollbar-thumb {
+    background: rgba(200, 169, 106, 0.6);
+    border-radius: 10px;
+}
+
+
+/* Firefox */
+
+.daftar-ucapan {
+    scrollbar-width: thin;
+    scrollbar-color:
+        rgba(200, 169, 106, 0.6)
+        transparent;
+}
+
+
+/* =================================
+   CARD UCAPAN
+================================= */
+
+.ucapan-card {
+    padding: 15px;
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+
+/* Nama */
+
+.ucapan-nama {
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+
+/* Isi ucapan */
+
+.ucapan-text {
+    margin: 0 0 8px;
+    line-height: 1.5;
+}
+
+
+/* Status */
+
+.ucapan-status {
+    font-size: 12px;
+    opacity: 0.7;
+}
+.daftar-ucapan {
+    max-height: 460px;
+    overflow-y: auto;
+}

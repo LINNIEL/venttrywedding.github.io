@@ -1,0 +1,56 @@
+#loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    transition: opacity 1s ease, visibility 1s ease;
+    
+}
+
+.name-loader {
+    position: relative;
+    display: inline-block;
+    font-family: "Beau Rivage", cursive;
+    font-size: 65px;
+    line-height: 1;
+}
+
+/* Outline hitam */
+.name-outline {
+    display: block;
+    color: transparent;
+    -webkit-text-stroke: 0.2px rgb(255, 196, 0);
+}
+
+/* Fill merah */
+.name-fill {
+    position: absolute;
+    inset: 0;
+    color: rgb(255, 255, 253);
+    overflow: hidden;
+    clip-path: inset(0 100% 0 0);
+    animation: fillLeftToRight 4s ease-in-out forwards;
+}
+
+@keyframes fillLeftToRight {
+
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.loading-text {
+    margin-top: 25px;
+    font-family: "Poppins", sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #ffffff;
+}

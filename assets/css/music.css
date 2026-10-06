@@ -1,0 +1,51 @@
+/* ==========================================
+   MUSIC BUTTON
+========================================== */
+
+.music-button{
+
+    position:fixed;
+
+    right:20px;
+    bottom:20px;
+
+    width:50px;
+    height:50px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:var(--color-primary);
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:99999;
+
+    transition:.3s;
+
+}
+
+.music-button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.music-button:active{
+
+    transform:scale(.95);
+
+}

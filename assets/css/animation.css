@@ -1,0 +1,80 @@
+/* ======================================================
+   COVER ANIMATION
+====================================================== */
+
+#linniel_1{
+
+    transition:
+        transform .9s ease,
+        opacity .9s ease;
+
+}
+
+
+
+/* ==========================================
+   SLIDE TO LEFT
+========================================== */
+
+#linniel_1.slide-left{
+
+    transform:translateX(-100%);
+    opacity:0;
+    pointer-events:none;
+
+}
+
+
+
+/* ==========================================
+   SLIDE TO RIGHT
+========================================== */
+
+#linniel_1.slide-right{
+
+    transform:translateX(100%);
+    opacity:0;
+    pointer-events:none;
+
+}
+
+
+
+/* ==========================================
+   FADE OUT
+========================================== */
+
+#linniel_1.fade-out{
+
+    opacity:0;
+    pointer-events:none;
+
+}
+
+
+
+/* ==========================================
+   SCALE OUT
+========================================== */
+
+#linniel_1.scale-out{
+
+    transform:scale(.9);
+    opacity:0;
+    pointer-events:none;
+
+}
+
+
+
+/* ==========================================
+   ZOOM OUT
+========================================== */
+
+#linniel_1.zoom-out{
+
+    transform:scale(1.15);
+    opacity:0;
+    pointer-events:none;
+
+}

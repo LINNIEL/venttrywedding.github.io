@@ -1,0 +1,336 @@
+/* ======================================================
+   ROOT
+====================================================== */
+
+:root{
+
+    /* Font */
+    --font-heading: serif;
+    --font-body: sans-serif;
+
+    /* Color */
+    --color-primary: #722F37;
+    --color-secondary: #ffffff;
+    --color-text: #ffffff;
+    --color-dark: #111111;
+    --color-overlay: rgba(0,0,0,.45);
+
+    /* Background */
+    --background-main: url("../bg/bg_1.jpg");
+
+    /* Font Size */
+    --fs-title: 3rem;
+    --fs-subtitle: 1.6rem;
+    --fs-heading: 2.3rem;
+    --fs-body: 1rem;
+    --fs-small: .9rem;
+
+    /* Font Weight */
+    --fw-light:300;
+    --fw-normal:400;
+    --fw-medium:500;
+    --fw-bold:700;
+
+    /* Radius */
+    --radius-small:10px;
+    --radius-medium:20px;
+    --radius-large:50px;
+
+    /* Shadow */
+    --shadow:
+        0 10px 25px rgba(0,0,0,.20);
+
+    /* Animation */
+    --transition:.35s ease;
+}
+
+
+
+/* ======================================================
+   RESET
+====================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+/* ======================================================
+   HTML
+====================================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+
+/* ======================================================
+   BODY
+====================================================== */
+
+body{
+
+    font-family:var(--font-body);
+    color:var(--color-text);
+    background:#000000;
+    overflow-x:hidden;
+
+}
+
+
+
+/* ======================================================
+   IMAGE
+====================================================== */
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+
+
+/* ======================================================
+   LINK
+====================================================== */
+
+a{
+
+    text-decoration:none;
+    color:inherit;
+
+}
+
+
+
+/* ======================================================
+   LIST
+====================================================== */
+
+ul{
+
+    list-style:none;
+    padding:0;
+    margin:0;
+
+}
+
+
+
+/* ======================================================
+   BUTTON
+====================================================== */
+
+
+
+
+
+/* ======================================================
+   SECTION
+====================================================== */
+
+section{
+
+    position:relative;
+    width:100%;
+    min-height:100vh;
+
+}
+
+
+
+/* ======================================================
+   CONTAINER MOBILE
+====================================================== */
+
+/* ======================================================
+   MOBILE CONTAINER
+====================================================== */
+
+.mobile-container{
+
+    position:relative;
+
+    width:100%;
+    max-width:400px;
+
+    margin:0 auto;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    z-index:1;
+
+    isolation:isolate;
+
+}
+.mobile-background{
+
+    position: fixed;
+
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:100%;
+    max-width:400px;
+    height:100vh;
+
+    background-image:var(--background-main);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+
+
+
+/* ======================================================
+   TYPOGRAPHY
+====================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+
+    font-family:var(--font-heading);
+    font-weight:var(--fw-bold);
+
+}
+
+p{
+
+    font-size:var(--fs-body);
+    line-height:1.8;
+
+}
+
+.sry{
+    font-size: 10px;
+}
+
+/* ======================================================
+   TEXT
+====================================================== */
+
+.text-primary{
+
+    color:var(--color-primary)!important;
+
+}
+
+.text-center{
+
+    text-align:center;
+
+}
+
+
+
+/* ======================================================
+   DISPLAY
+====================================================== */
+
+.d-flex-center{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+/* ======================================================
+   BACKGROUND
+====================================================== */
+
+.main-background{
+
+    background-image:var(--background-main);
+    background-position:center;
+    background-size:100% auto;
+    background-repeat:no-repeat;
+
+}
+
+
+
+/* ======================================================
+   OVERLAY
+====================================================== */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:var(--color-overlay);
+
+}
+
+
+
+/* ======================================================
+   SPACING
+====================================================== */
+
+.py-section{
+
+    padding:80px 20px;
+
+}
+.btn_maps{
+    background:var(--color-primary);
+
+    color:#fff;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:5px 40px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    transition:var(--transition);
+}
+
+
+
+/* ======================================================
+   HIDE SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar{
+
+    width:0;
+
+}
+
+html{
+
+    scrollbar-width:none;
+
+}

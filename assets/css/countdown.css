@@ -1,0 +1,54 @@
+
+.countdown{
+  font-weight: bold;
+}
+#countdown {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--color-primary);
+}
+
+#tiles {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#tiles span {
+  z-index: 100;
+  display: inline-block;
+  color: #ffffff;
+  font-size: 2em;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 8px;
+  border: solid 2px white;
+  margin: 0 5px;
+  box-shadow: 2px 2px 4px #C8A96A;
+  text-align: center;
+  background-color: var(--color-primary);
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.labels li {
+  font-size: 0.9em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  width: 60px;
+  font-weight: bold;
+  text-align: center;
+}

@@ -1,0 +1,76 @@
+
+#linniel_4{
+
+    position:relative;
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    overflow:hidden;
+
+}
+.jadwal_img{
+    width: 300px;
+    filter: drop-shadow(2px 4px 2px white);
+}
+#linniel_4 .col-12{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+.jadwal{
+    filter: drop-shadow(1px 2px 2px white);
+}
+/* ==========================================
+   JADWAL WRAPPER
+========================================== */
+
+.jadwal-wrapper{
+
+    width:100%;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(1px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 8px 32px rgba(0,0,0,.18);
+
+}
+.jadwal p{
+
+    display:flex;
+
+    justify-content:flex-start;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-bottom:12px;
+
+}
+
+.icon{
+
+    width:22px;
+
+    height:22px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+}
+.jdwl{
+    filter: drop-shadow(2px 2px 2px black);
+}

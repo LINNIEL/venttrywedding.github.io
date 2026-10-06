@@ -1,0 +1,399 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111111,
+            #1d1d1d
+        );
+
+    color: #ffffff;
+
+}
+
+
+/* CONTAINER */
+
+.rsvp-container {
+
+    width: 100%;
+    max-width: 400px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    padding: 30px 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* CARD */
+
+.rsvp-card {
+
+    width: 100%;
+
+    padding: 30px 22px;
+
+   background-color: var(--color-primary);
+
+    border:
+        2px solid rgb(255, 255, 255);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.35);
+
+}
+
+
+/* HEADER */
+
+.rsvp-header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.small-title {
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    color: #fcfcfc;
+
+    margin-bottom: 10px;
+
+}
+
+
+.rsvp-header h1 {
+
+    font-size: 42px;
+
+    letter-spacing: 5px;
+
+    font-weight: 500;
+
+    margin-bottom: 8px;
+
+}
+
+
+.description {
+
+    font-size: 13px;
+
+    color: #cccccc;
+
+}
+
+
+/* FORM */
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+
+    color: #eeeeee;
+
+}
+
+
+/* INPUT */
+
+input[type="text"],
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: #ffffff;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+input[type="text"]::placeholder,
+textarea::placeholder {
+
+    color: #999999;
+
+}
+
+
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #c8a96a;
+
+}
+
+
+/* SELECT */
+
+select option {
+
+    background: #222222;
+
+    color: #ffffff;
+
+}
+
+
+/* ATTENDANCE */
+
+.attendance-options {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+.attendance-option {
+
+    margin: 0 !important;
+
+}
+
+
+.attendance-option input {
+
+    display: none;
+
+}
+
+
+.attendance-option span {
+
+    display: block;
+
+    padding: 13px 8px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    color: #cccccc;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition: 0.25s;
+
+}
+
+
+.attendance-option input:checked + span {
+
+    background: #c8a96a;
+
+    color: #111111;
+
+    border-color: #c8a96a;
+
+}
+
+
+/* TEXTAREA */
+
+textarea {
+
+    resize: vertical;
+
+    min-height: 120px;
+
+}
+
+
+/* BUTTON */
+
+button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+    border: solid 2px black;
+    background: #f7f6f4;
+
+    color: #111111;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+}
+
+
+button:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(200,169,106,0.25);
+
+}
+
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+}
+
+
+/* LOADING */
+
+.loading {
+
+    display: none;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+
+    color: #c8a96a;
+
+}
+
+
+/* SUCCESS */
+
+.success-message {
+
+    display: none;
+
+    text-align: center;
+
+    padding: 20px 5px;
+
+}
+
+
+.success-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #c8a96a;
+
+    color: #111111;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+}
+
+
+.success-message h2 {
+
+    margin-bottom: 10px;
+
+    font-weight: 500;
+
+}
+
+
+.success-message p {
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    color: #cccccc;
+
+}
