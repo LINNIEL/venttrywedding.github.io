@@ -7,23 +7,60 @@ const GOOGLE_SCRIPT_URL =
     "https://script.google.com/macros/s/AKfycbx9XocFAsvU1B7FZd_U4rbaFavayktjAcYQoSD1CK2qHGeyeJjociHAeHYWjcON8mWv/exec";
 
 
+let ucapanSudahDimuat = false;
+
+
+/* =================================
+   LOAD UCAPAN
+================================= */
+
 async function loadUcapan() {
 
-    const container =
-        document.getElementById(
-            "daftarUcapan"
-        );
+    if (ucapanSudahDimuat) return;
 
+    const container =
+        document.getElementById("daftarUcapan");
 
     if (!container) return;
 
 
+    ucapanSudahDimuat = true;
+
+
     try {
+
+        /* =========================
+           TIMEOUT 8 DETIK
+        ========================= */
+
+        const controller =
+            new AbortController();
+
+        const timeout =
+            setTimeout(() => {
+                controller.abort();
+            }, 8000);
+
 
         const response =
             await fetch(
-                GOOGLE_SCRIPT_URL
+                GOOGLE_SCRIPT_URL,
+                {
+                    method: "GET",
+                    cache: "no-store",
+                    signal: controller.signal
+                }
             );
+
+
+        clearTimeout(timeout);
+
+
+        if (!response.ok) {
+            throw new Error(
+                "Server mengembalikan error."
+            );
+        }
 
 
         const data =
@@ -33,9 +70,9 @@ async function loadUcapan() {
         container.innerHTML = "";
 
 
-        /*
-         * Jika belum ada ucapan
-         */
+        /* =========================
+           BELUM ADA UCAPAN
+        ========================= */
 
         if (!data || data.length === 0) {
 
@@ -46,13 +83,12 @@ async function loadUcapan() {
             `;
 
             return;
-
         }
 
 
-        /*
-         * Tampilkan ucapan
-         */
+        /* =========================
+           TAMPILKAN UCAPAN
+        ========================= */
 
         data.forEach(function(item) {
 
@@ -70,7 +106,8 @@ async function loadUcapan() {
                 "ucapan-nama";
 
             nama.textContent =
-                item.nama || "Tamu Undangan";
+                item.nama ||
+                "Tamu Undangan";
 
 
             const ucapan =
@@ -97,9 +134,7 @@ async function loadUcapan() {
 
 
             card.appendChild(nama);
-
             card.appendChild(ucapan);
-
             card.appendChild(status);
 
             container.appendChild(card);
@@ -126,15 +161,49 @@ async function loadUcapan() {
 }
 
 
-/*
- * Jalankan ketika halaman selesai dimuat
- */
+/* =================================
+   LOAD SAAT SECTION MENDEKATI VIEWPORT
+================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function() {
 
-        loadUcapan();
+        const section =
+            document.querySelector(
+                ".ucapan-section"
+            );
+
+
+        if (!section) return;
+
+
+        const observer =
+            new IntersectionObserver(
+                function(entries, observer) {
+
+                    entries.forEach(function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            loadUcapan();
+
+                            observer.unobserve(
+                                section
+                            );
+
+                        }
+
+                    });
+
+                },
+                {
+                    rootMargin: "300px"
+                }
+            );
+
+
+        observer.observe(section);
 
     }
 );
