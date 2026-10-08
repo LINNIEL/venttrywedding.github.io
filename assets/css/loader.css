@@ -14,7 +14,7 @@
 .name-loader {
     position: relative;
     display: inline-block;
-    font-family: "Beau Rivage", cursive;
+    font-family: var(--font-name);
     font-size: 65px;
     line-height: 1;
 }

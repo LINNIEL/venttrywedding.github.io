@@ -72,5 +72,8 @@
 
 }
 .jdwl{
-    filter: drop-shadow(2px 2px 2px black);
+    font-family: "Caramel", cursive;
+    font-size: 46px;
+    color:var(--color-primary);
+    filter: drop-shadow(2px 2px 2px rgb(247, 247, 247));
 }

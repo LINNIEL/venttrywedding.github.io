@@ -26,7 +26,6 @@
     font-weight: bold;
     letter-spacing: 3px;
     color: var(--color-primary);
-    filter: drop-shadow(2px 2px 2px white);
     margin-bottom: 8px;
 
 }
@@ -36,7 +35,7 @@
 
     font-size: 28px;
 
-    font-weight: 400;
+    font-weight: bolder;
 
     margin: 0;
 
@@ -220,7 +219,12 @@
     background: var(--color-primary);
 
 }
-
+.txt_2{
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--color-primary);
+}
 
 /* Nama */
 

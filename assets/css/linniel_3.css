@@ -48,25 +48,18 @@ hr.custom{
 
 }
 .nama{
-    font-family: "Tangerine", cursive;
+    font-family: "Mea Culpa", cursive;
     font-style: normal;
     font-size: 50px;
-    font-weight: bolder;
     color: var(--color-secondary);
     filter: drop-shadow(2px 4px 2px black);
 }
 .nama_2{
-    font-family: "Tangerine", cursive;
-    font-style: normal;
+    font-family: "Mea Culpa", cursive;
     font-size: 40px;
-    font-weight: bolder;
     color:var(--color-secondary);
     filter: drop-shadow(2px 4px 2px black);
 }
-.jdwl{
-    font-family: "Tangerine", cursive;
-    font-style: normal;
-    font-size: 40px;
-    font-weight: bolder;
-    color:var(--color-primary);
+.glr{
+    font-family: "Caramel", cursive;
 }

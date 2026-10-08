@@ -7,6 +7,7 @@
     /* Font */
     --font-heading: serif;
     --font-body: sans-serif;
+    --font-name: "Mea Culpa", cursive;
 
     /* Color */
     --color-primary: #722F37;
@@ -241,6 +242,11 @@ p{
 
     text-align:center;
 
+}
+
+.txt{
+    font-family: "Quicksand", sans-serif;
+    font-weight: bolder;
 }
 
 

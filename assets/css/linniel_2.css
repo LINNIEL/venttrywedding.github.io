@@ -59,14 +59,10 @@
 #linniel_2 .section-decoration{
 
     position:absolute;
-
     inset:0;
-
     width:100%;
     height:100%;
-
     z-index:2;
-
     pointer-events:none;
 
 }
@@ -139,15 +135,12 @@
 
 #linniel_2 .ayat{
 
-    font-size:var(--fs-body);
-
-    font-weight:bolder;
-
+    font-size: 30px;
+    font-family: "Caramel", cursive;
     color:var(--color-secondary) !important;
-
     margin-bottom:15px;
-
     filter:drop-shadow(2px 1px 4px black);
+    line-height: 1.2;
 
 }
 
@@ -159,13 +152,11 @@
 
 #linniel_2 .kutipan_2{
 
-    font-size:22px;
-
+    font-size: 32px;
+    font-family: "Caramel", cursive;
     color:var(--color-secondary) !important;
-
     filter:drop-shadow(2px 1px 4px black);
 
-    font-weight:bolder;
 
 }
 

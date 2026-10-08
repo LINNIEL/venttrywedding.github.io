@@ -9,3 +9,11 @@
     overflow:hidden;
 
 }
+
+.kel_mem{
+    font-family: "Quicksand", sans-serif;
+    font-weight: bolder;
+    font-size: 16px;
+    color: white;
+    filter: drop-shadow(2px 2px 2px rgb(247, 247, 247));
+}
