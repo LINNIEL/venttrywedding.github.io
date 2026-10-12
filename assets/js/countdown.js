@@ -1,5 +1,5 @@
 // Atur hitungan mundur ke 15 November 2024 pukul 18:00 WITA (UTC+8)
-var target_date = new Date('October 23, 2026 17:00:00 GMT+8').getTime();
+var target_date = new Date('October 16, 2026 18:00:00 GMT+8').getTime();
 var days, hours, minutes, seconds; 
 
 var countdown = document.getElementById("tiles"); 
