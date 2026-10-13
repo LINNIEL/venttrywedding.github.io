@@ -173,10 +173,10 @@
 
 #guestName{
 
-    font-size:1.6rem;
-
+    font-size: 14px;
+    font-family: "Quicksand", sans-serif;
     color:var(--color-secondary);
-
+    font-weight: bolder;
     filter:drop-shadow(2px 4px 4px black);
 
     margin-bottom:35px;
